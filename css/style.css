@@ -3,3 +3,159 @@
 
 *, *::before, *::after {box-sizing: inherit;}
 html {box-sizing: border-box;}
+
+:root {
+  --cl-desaturated-red: hsl(0, 36%, 70%);
+  --cl-soft-red: hsl(0, 93%, 68%);
+  --cl-dark-grayish-red: hsl(0, 6%, 24%);
+  --cl-gradient1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --cl-gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+  --fs-default: 15px;
+
+  font: 400 var(--fs-default) "Josefin Sans";
+}
+
+body {
+  position: relative;
+}
+
+header {
+  display: inline-block;
+  position: absolute;
+  margin: 2rem 0 2rem 2rem;
+}
+
+.main__hero {
+  margin-top: calc(37px + 4rem);
+}
+
+.main__hero__img {
+  width: 100%;
+}
+
+.main__intro {
+  margin: 3rem 2rem 4rem;
+  text-align: center;
+}
+
+.main__title {
+  font-size: 2.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 600;
+  color: var(--cl-dark-grayish-red);
+}
+
+.title--light {
+  font-weight: 300;
+}
+
+.title--color {
+  color: var(--cl-desaturated-red);
+}
+
+.main__desc {
+  color: var(--cl-desaturated-red);
+  margin: 2rem;
+  line-height: 1.8rem;
+}
+
+.form--style {
+  display: flex;
+  border: 1px solid var(--cl-desaturated-red);
+  border-radius: 10rem;
+  /* overflow: hidden; */
+}
+
+.form__input,
+.form__btn {
+  display: block;
+}
+
+.form__input {
+  flex: 2;
+  padding: .75rem 1.75rem;
+  font: 400 var(--fs-default) "Josefin Sans";
+}
+
+.form__input--reset {
+  outline: none;
+  border: none;
+  background: none;
+
+}
+
+.form__btn {
+  flex: 0;
+  padding: .75rem 1.75rem;
+  border-radius: 10rem;
+  background: var(--cl-gradient2);
+  transition: opacity 1s, box-shadow 1s;
+}
+
+.form__btn:hover {
+  opacity: .7;
+  box-shadow: 0 8px 30px var(--cl-desaturated-red);
+  transition: opacity 1s, box-shadow 1s;
+  cursor: pointer;
+}
+
+.form__btn--reset {
+  border: none;
+  outline: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-desktop {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .flex {
+    flex-direction: row;
+  }
+
+  .main__hero {
+    margin-top: 0;
+  }
+
+  .main__intro {
+    flex: 1;
+  }
+
+  .main__hero {
+    order: 1;
+    flex: 1;
+  }
+
+  .main__intro {
+    text-align: left;
+    margin: 10rem 14rem 0 13rem;
+  }
+
+  .main__desc {
+    margin-left: 0;
+  }
+
+  .main__hero__img {
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .display-desktop {
+    display: block;
+  }
+
+  .display-mobile {
+    display: none;
+  }
+
+  .main__title {
+    font-size: 3.8rem;
+  }
+}

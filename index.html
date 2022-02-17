@@ -11,19 +11,20 @@
 
 <body>
   <header>
-    <img src="images/logo.svg" alt="logo">
+    <img src="images/logo.svg" alt="logo" class="header__logo">
   </header>
   <main>
     <div class="flex">
       <div class="column main__hero">
-        <img src="images/hero-mobile.jpg" alt="A girl">
+        <img src="images/hero-mobile.jpg" alt="A girl" class="main__hero__img display-mobile">
+        <img src="images/hero-desktop.jpg" alt="A girl" class="main__hero__img display-desktop">
       </div>
-      <div class="column">
-        <h1>We're coming soon</h1>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form action="javascript:void(0);">
-          <input type="text" placeholder="Email Address">
-          <button><img src="images/icon-arrow.svg" alt="icon"></button>
+      <div class="column main__intro">
+        <h1 class="main__title"><span class="title--light title--color">We're</span><br> coming soon</h1>
+        <p class="main__desc">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form action="javascript:void(0);" class="form--style">
+          <input type="text" placeholder="Email Address" id="input" class="form__input form__input--reset">
+          <button class="form__btn form__btn--reset" id="btn"><img src="images/icon-arrow.svg" alt="icon"></button>
         </form>
       </div>
     </div>
