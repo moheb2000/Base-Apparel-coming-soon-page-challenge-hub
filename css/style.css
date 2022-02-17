@@ -1,0 +1,5 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+*, *::before, *::after {box-sizing: inherit;}
+html {box-sizing: border-box;}
