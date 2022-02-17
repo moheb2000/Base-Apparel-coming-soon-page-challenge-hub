@@ -63,9 +63,9 @@ header {
 
 .form--style {
   display: flex;
-  border: 1px solid var(--cl-desaturated-red);
+  align-items: center;
+  outline: 1px solid var(--cl-desaturated-red);
   border-radius: 10rem;
-  /* overflow: hidden; */
 }
 
 .form__input,
@@ -86,12 +86,25 @@ header {
 
 }
 
+.form__validate {
+  display: none;
+  color: var(--cl-soft-red);
+  margin-top: 1rem;
+  margin-left: 1.75rem;
+}
+
+.form__erroricon {
+  display: none;
+  margin-right: .5rem;
+}
+
 .form__btn {
   flex: 0;
   padding: .75rem 1.75rem;
   border-radius: 10rem;
   background: var(--cl-gradient2);
   transition: opacity 1s, box-shadow 1s;
+  z-index: 60;
 }
 
 .form__btn:hover {

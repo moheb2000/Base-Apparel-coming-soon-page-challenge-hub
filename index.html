@@ -7,6 +7,7 @@
   <title>Base Apparel coming soon page challenge hub</title>
   <link rel="icon" href="images/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -22,10 +23,12 @@
       <div class="column main__intro">
         <h1 class="main__title"><span class="title--light title--color">We're</span><br> coming soon</h1>
         <p class="main__desc">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form action="javascript:void(0);" class="form--style">
+        <form action="javascript:void(0);" class="form--style" id="form">
           <input type="text" placeholder="Email Address" id="input" class="form__input form__input--reset">
+          <img id="error-icon" src="images/icon-error.svg" alt="error icon" class="form__erroricon">
           <button class="form__btn form__btn--reset" id="btn"><img src="images/icon-arrow.svg" alt="icon"></button>
         </form>
+        <p id="validate" class="form__validate">Please provide a valid email</p>
       </div>
     </div>
   </main>
